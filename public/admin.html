@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechNova | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ⚡ TechNova
+        </div>
+
+        <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/admin.html">Admin</a>
+    <a href="/leaderboard.html">🏆 Leaderboard</a>
+    <button onclick="logoutAdmin()">Logout</button>
+</div>
+
+    </nav>
+
+
+    <section class="admin-section">
+
+        <p class="tagline">TECHNOVA MANAGEMENT</p>
+
+        <h1>👨‍💼 Admin Dashboard</h1>
+
+        <p class="admin-subtitle">
+            Manage participants, scores and events.
+        </p>
+
+
+        <!-- DASHBOARD STATISTICS -->
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3>👥</h3>
+                <p>Total Participants</p>
+                <h2 id="totalParticipants">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>⚡</h3>
+                <p>Total Events</p>
+                <h2 id="totalEvents">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>🏆</h3>
+                <p>Highest Score</p>
+                <h2 id="highestScore">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>📊</h3>
+                <p>Average Score</p>
+                <h2 id="averageScore">0</h2>
+            </div>
+
+        </div>
+
+
+        <!-- PARTICIPANT MANAGEMENT -->
+
+        <div class="admin-panel">
+
+            <h2>👥 Participants</h2>
+
+            <div class="admin-controls">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="🔎 Search by name, email or college..."
+                >
+
+                <button onclick="loadParticipants()">
+                    View Participants
+                </button>
+
+            </div>
+
+            <div id="participants"></div>
+
+        </div>
+
+
+        <!-- EVENT MANAGEMENT -->
+
+        <div class="admin-panel">
+
+            <h2>⚡ Event Management</h2>
+
+            <button onclick="loadEvents()">
+                View Events
+            </button>
+
+            <div id="events"></div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>⚡ TechNova Tech Event Management System</p>
+
+        <p>Built for Tech Council</p>
+
+    </footer>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
